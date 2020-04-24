@@ -2852,12 +2852,12 @@ bool K7Zip::writeData(const char *data, qint64 size)
         return false;
     }
 
-    if (d->m_currentFile->position() == d->outData.size()) {
+    // if (d->m_currentFile->position() == d->outData.size()) {
         d->outData.append(data, size);
-    } else {
-        d->outData.remove(d->m_currentFile->position(), d->m_currentFile->size());
-        d->outData.insert(d->m_currentFile->position(), data, size);
-    }
+    // } else {
+    //     d->outData.remove(d->m_currentFile->position(), d->m_currentFile->size());
+    //     d->outData.insert(d->m_currentFile->position(), data, size);
+    // }
 
     return true;
 }
